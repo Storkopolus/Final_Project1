@@ -1,0 +1,1 @@
+web: gunicorn fetal-health.app:app

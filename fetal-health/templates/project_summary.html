@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="UTF-8"/> 
+  <title>Project Summary</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+  
+  <!--  style.css path when using flask app --> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="index.html">Fetal Health Classification </a>
+   
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="project_summary.html">Project Summary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fetal_health_predictor.html">Fetal Health Predictor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bio_page.html">Bio page</a>
+          </li>
+        </ul>
+    </nav>
+    
+    <div class=container>
+    <div class=row>
+    <div class="col-md-12 col-xs-6">
+    <h1 class=header>
+        Project Summary
+    </h1>
+    </div>
+    </div>
+
+    <div class=row>
+    <div class="col-md-12 col-xs-6">
+    <h2 class=subheader>
+        Fetal Health Predictor
+    </h2>
+    <p class=paragraph>
+        Our team utilized <a href="https://www.kaggle.com/andrewmvd/fetal-health-classification">
+        fetal health data </a>  from Kaggle to create a machine learning model that 
+        will predict the probable outcome of the health of a fetus based on user input.  
+        The possible fetal health outcomes are:
+        <br>
+        1. Normal
+        2. Suspect
+        3. Pathological
+        <br>
+    </p>
+
+    <p class=paragraph>
+        The original fetal health dataframe started with 22 columns. Our goal was to
+        narrow down to the most pertinent columns while still maintaining the highest
+        possible accuracy.  We originally narrowed the dataframe down to 11 columns.
+    </p>
+    <p class=paragraph>
+        We initially tested the model utilizing the following machine learning 
+        algorithms in Jupyter notebook:
+      <br>
+        1. Logistic Regression
+      <br>
+        2. Linear Discrimination Analysis
+      <br>
+        3. K Neighbors Classifier
+      <br>
+        4. Random Forest Classifier
+      <br>
+        5. Decision Tree Classifier
+      <br>
+        6. Gaussian NB
+      <br>
+        7. Linear SVC
+      <br>
+      <br>
+      We then plotted the algorithms to get a visual comparison.
+      We can see below that the box and whisker plots are between 
+      approximately 81% and 97% accuracy. As seen in the plot, 
+      the Random Forest Classifier achieves the highest accuracy at 94%.
+      </p>
+      <img  src="../static/images/Algorithm_Comparison.png" alt="boxplot">
+      <br>
+      <br>
+      <br>
+      <p class=paragraph>
+        We continued to narrow down to create
+        the least amount of columns with the highest accuracy above 90%.  
+        We started with plotting all the columns to see which columns to drop.
+  
+        <img width=1250 height=1050 src="../static/images/input_histograms.png" alt="histograms">
+        <br>
+        We were able to narrow the dataframe down to 6 columns and maintain a
+        predictability outcome of 93% accuracy.  
+        After the group decided on the 6 inputs it was determined 
+        that we needed to optimize the model, by tuning the parameters.  
+        A random forest regressor was used to tune the following parameters: 
+        n_estimators, min_samples_split, min_samples_leaf, max_features, max_depth, 
+        and bootstrap.  
+        <br>
+        <br>
+        Once the optimization was complete there was a slight 
+        increase in the accuracy from approximately 93% to 94%, which matched 
+        the original accuracy when all 11 inputs were used and no optimization 
+        was utilized.  These optimized settings were then used when the machine 
+        learning model was saved for import into the flask app.
+  </p>  
+  </div>
+  </div>
+
+  </div>
+
+<footer>
+    <p class=footer>Copyright 2021.  Case Western Reserve University Bootcamp.</p>
+</footer>
+</body>
+</html>

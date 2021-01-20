@@ -1,0 +1,96 @@
+.navbar-brand {
+    color: white;
+    font-size: 40px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.navbar-custom {
+    background-color: rgb(102, 145, 139);
+}
+
+.nav-link {
+    color: white;
+    font-size: 25px;
+    margin-left: 50px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.header {
+    color: rgb(82, 120, 115);
+    font-size: 35 px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+    
+}
+
+.subheader {
+    color: rgb(82, 120, 115);
+    font-size: 30 px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+}
+
+.paragraph {
+    color: rgb(82, 120, 115);
+    font-size: 30 px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.header3 {
+    color: rgb(82, 120, 115);
+    font-size: 30px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+}
+
+.form-group {
+    color: rgb(82, 120, 115);
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-default {
+    color: rgb(82, 120, 115);
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+    outline: auto;
+}
+
+.definitions_header {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 25px;
+    color: rgb(82, 120, 115);
+    text-decoration: underline;
+}
+
+.definition {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: rgb(82, 120, 115);
+}
+
+.carousel {
+    color: rgb(82, 120, 115);
+    font-size: 30 px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold; 
+}
+
+.footer {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: rgb(82,120, 115);
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel_captions {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: black;
+    font-weight: bold;
+}
+
+.fetal_outcome {
+    font-family: Comic Sans MS, Comic Sans cursive;
+    color: rgb(82, 120, 115);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="UTF-8"/> 
+  <title>Home page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+  
+  <!-- Link to CSS sheet when using flask app -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+
+</head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <!-- Brand/logo -->
+        <a style="font-size: 40px" class="navbar-brand" href="index.html">Fetal Health Classification </a>
+   
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="project_summary.html">Project Summary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fetal_health_predictor.html">Fetal Health Predictor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bio_page.html">Bio page</a>
+          </li>
+        </ul>
+    </nav>
+    
+  
+
+    <div class="container mt-3">
+
+        <h2 class=carousel >Fetal Stages</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+          </ul>
+          
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{ user_image }}" alt="4 weeks" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3 class=carousel_captions>
+                4 weeks
+              </h3>
+            </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/8_weeks.jpg" alt="8 weeks" width="1100" height="500">
+              <div class="carousel-caption">
+                <h3 class=carousel_captions>
+                  8 weeks
+                </h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/images/12_weeks.jpg" alt="12 weeks" width="1100" height="500">
+              <div class="carousel-caption">
+                <h3 class=carousel_captions>
+                  12 weeks
+                </h3>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/images/16_weeks.jpg" alt="16 weeks" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 class=carousel_captions>
+                    16 weeks
+                  </h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/20_weeks.jpg" alt="20 weeks" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 class=carousel_captions>
+                    20 weeks
+                  </h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/24_weeks.jpg" alt="24 weeks" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 class=carousel_captions>
+                    24 weeks
+                  </h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/28_weeks.jpg" alt="28 weeks" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 class=carousel_captions>
+                    28 weeks
+                  </h3>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../static/images/36_weeks.jpg" alt="36 weeks" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3 class=carousel_captions>
+                    36 weeks
+                  </h3>
+                </div>
+              </div>
+          </div>
+          
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+        
+        </div>
+
+
+        <footer>
+          <p class=footer>Copyright 2021.  Case Western Reserve University Bootcamp.</p>
+        </footer>
+        
+  </body>
+</html>
+

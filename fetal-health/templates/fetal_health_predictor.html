@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" charset="UTF-8"/> 
+  <title>Fetal Health Predictor</title>
+  <!-- D3 JS -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+  
+  <!--  style.css path when using flask app --> 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="index.html">Fetal Health Classification </a>
+   
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="project_summary.html">Project Summary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fetal_health_predictor.html">Fetal Health Predictor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bio_page.html">Bio page</a>
+          </li>
+        </ul>
+    </nav>
+    
+    <div class=container>
+    <div class=row>
+    <div class="col-md-12 col-xs-6">
+    <h1 class=header>
+        Fetal Health Predictor
+    </h1>
+    </div>
+    </div>
+
+    <div class=row>
+    <div class="col-md-12 col-xs-6">
+      <h3 class=header3>
+          Enter in values below to obtain a prediction of the fetal 
+          health outcome
+      </h3>
+    </div>
+    </div>
+
+      <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+              <form id="form" method="POST" action="{{ url_for('predict')}}" role="form", name="fetal_form">
+                  <div class="form-group">
+                      <label for="inputBaselineFHR">Baseline Fetal Heart Rate</label>
+                      <input type="text" class="form-control" id="inputBaselineFHR" name="baselineFHR" placeholder="BaselineFHR">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputAccelerations">Accelerations per second</label>
+                      <input type="text" class="form-control" id="inputAccelerations" name="accelerations" placeholder="Accelerations">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputUterineContractions">Uterine Contractions per second</label>
+                      <input type="text" class="form-control" id="inputUterineContractions" name="uterineContractions" placeholder="UterineContractions">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputProlongedDecelerations">Prolonged Decelerations per second</label>
+                    <input type="text" class="form-control" id="inputProlongedDecelerations" name="prolongedDecelerations" placeholder="ProlongedDecelerations">
+                  </div>
+                  <div class="form-group">
+                  <label for="inputAbnormalSTV">Abnormal Short Term Variability (Percentage)</label>
+                  <input type="text" class="form-control" id="inputAbnormalSTV" name="abnormalSTV" placeholder="AbnormalShortTermVariability">
+                  </div>
+                <div class="form-group">
+                <label for="inputPercentageAbnormalLTV">Abnormal Long Term Variability (Percentage)</label>
+                <input type="text" class="form-control" id="inputPercentageAbnormalLTV" name="percentageAbnormalLTV" placeholder="PercentageAbnormalLongTermVariability">
+                </div>
+                  <input id="button" type="Submit" value="Submit" class="btn btn-default">
+              </form>
+              <br>
+              <h3 class=fetal_outcome>Fetal Outcome: 
+                <br>
+              {{ prediction }}</h3>
+                  
+            </div>
+
+          <div class="col-md-3 col-xs-6">
+            <img  src="../static/images/16_weeks.jpg" alt="fetus">
+          </div>
+      </div>
+    </div>
+      <br>
+      <br>
+      <br>
+
+  <div class="container border">
+  <div class="row" > 
+  <div class="col-md-12 col-xs-6">
+    <h4 class=definitions_header>
+      Definitions
+    </h4>
+
+    <h5 class=definition> 
+      Baseline Fetal Heart Rate: the heart rate during a 10 minute segment 
+      rounded to the nearest 5 beats per minute.  Normal baseline fetal
+      heart rate is 110-160 beats per minute.  
+    </h5>
+    <br>
+      <h5 class=definition> 
+      Accelerations: short term rises in the baseline fetal heart rate of
+      at least 15 beats per minute and lasting at least 15 seconds.  
+      These are normal and healthy, and indicate the fetus has an adequate
+      supply of oxygen. 
+      </h5>
+      <br>
+      <h5 class=definition> 
+      Uterine Contractions: tightening of the muscles of the uterus.  
+      During the 2nd and 3rd trimester, occasional contractions called 
+      Braxton-Hicks are normal and may last 30 seconds to 2 minutes.  
+      During labor, contractions last 30-70 seconds and become more frequent
+      as the baby is ready to be delivered.
+      </h5>
+      <br>
+      <h5 class=definition> 
+      Decelerations: decelerations are temporary drops in the baseline
+      fetal heart rate. A prolonged deceleration is a drop below baseline 
+      by 15 bpm for longer than 2 minutes but less than 10 minutes.  Prolonged decelerations
+      indicate the fetus isn't getting enough oxygen.
+      </h5>
+      <br>
+      <h5 class=definition> 
+      Short Term Variability: short term variability is the
+      beat to beat variation in fetal heart rate.  Normal variability
+      is 6-25 beats per minute. Variability is normal after 32 weeks.
+      Decreased variability may indicate lack of oxygen or a congenital
+      heart anomaly.
+      </h5>
+      <br>
+      <h5 class=definition> 
+      Long Term Variability: long term
+      variability is the fluctuation in fetal heart rate in one minute.
+    </h5>
+  </div>
+  </div>
+
+  </div>
+
+  <footer>
+    <p class=footer>Copyright 2021.  Case Western Reserve University Bootcamp.</p>
+  </footer>
+
+</body>
+</html>
