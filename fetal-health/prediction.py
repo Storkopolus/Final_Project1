@@ -18,6 +18,6 @@ def predict():
     return jsonify({'prediction': list(predicition)})
 
 if __name__ == '__main__':
-    clf = joblib.load('finalized_model.sav')
+    clf = pickle.load(open('finalized_model.sav', 'rb'))
     # model_columns = joblib.load('finalized_model.sav')
     app.run(port=8080)
