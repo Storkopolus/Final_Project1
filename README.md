@@ -1,5 +1,7 @@
 # Fetal Health ML Classifier
 
+(https://fetal-health.herokuapp.com/)
+
 Our team utilized fetal health data from Kaggle ["Fetal Health Classification." Accessed: December 23, 2020](https://www.kaggle.com/andrewmvd/fetal-health-classification) to create a machine learning model that will predict the probable outcome of the health of a fetus based on user input. The possible fetal health outcomes are:
 
 1. Normal 
@@ -8,7 +10,7 @@ Our team utilized fetal health data from Kaggle ["Fetal Health Classification." 
 
 The original fetal health dataframe started with 22 columns(histograms of input data are shown below). Our goal was to narrow down to the most pertinent columns while still maintaining the highest possible accuracy. We originally narrowed the dataframe down to 11 columns.
 
-![image of input_histograms](https://github.com/Storkopolus/Final_Project/blob/main/fetal_health/static/images/input_histograms.png)
+![image of input_histograms](https://github.com/Storkopolus/Final_Project1/blob/main/fetal-health/static/images/input_histograms.png)
 
 We initially tested the model utilizing the following machine learning algorithms in Jupyter notebook:
 
@@ -20,7 +22,7 @@ We initially tested the model utilizing the following machine learning algorithm
 6. Gaussian NB
 7. Linear SVC
 
-![image of Algorithm_Comparison](https://github.com/Storkopolus/Final_Project/blob/main/fetal_health/static/images/Algorithm_Comparison.png)
+![image of Algorithm_Comparison](https://github.com/Storkopolus/Final_Project1/blob/main/fetal-health/static/images/Algorithm_Comparison.png)
 
 The result that gave the highest accuracy was the Random Forest Classifier with a predictability accuracy outcome of 94%. We continued to narrow down to create the least amount of columns with the highest accuracy above 90%. We were able to narrow the dataframe down to 6 columns and maintain a predictability outcome of 93% accuracy. The final model was saved to be incorporated into our Flask app.
 
