@@ -1,5 +1,5 @@
 # Fetal Health ML Classifier
-Fetal Health Classifier App
+Fetal Health Classifier App:
 https://fetal-health.herokuapp.com/
 
 Our team utilized fetal health data from Kaggle ["Fetal Health Classification." Accessed: December 23, 2020](https://www.kaggle.com/andrewmvd/fetal-health-classification) to create a machine learning model that will predict the probable outcome of the health of a fetus based on user input. The possible fetal health outcomes are:
