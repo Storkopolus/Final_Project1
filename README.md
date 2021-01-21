@@ -10,7 +10,7 @@ Our team utilized fetal health data from Kaggle ["Fetal Health Classification." 
 
 The original fetal health dataframe started with 22 columns(histograms of input data are shown below). Our goal was to narrow down to the most pertinent columns while still maintaining the highest possible accuracy. We originally narrowed the dataframe down to 11 columns.
 
-![image of input_histograms](https://github.com/Storkopolus/Final_Project1/blob/master/fetal-health/static/images/Algorithm_Comparison.png)
+![image of input_histograms](https://github.com/Storkopolus/Final_Project1/blob/master/fetal-health/static/images/input_histograms.png)
 
 We initially tested the model utilizing the following machine learning algorithms in Jupyter notebook:
 
