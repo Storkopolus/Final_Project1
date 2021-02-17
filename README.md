@@ -28,3 +28,6 @@ The result that gave the highest accuracy was the Random Forest Classifier with 
 approximately 81% and 97% accuracy. We continued to narrow down inputs to create the least amount of columns with the accuracy above 90%. We were able to narrow the dataframe down to 6 columns and maintain a predictability outcome of 93% accuracy. The final model was saved to be incorporated into our Flask app.
 
 After the group decided on the six inputs it was determined that we needed to optimize the model, by tuning the parameters. A random forest regressor was used to tune the following parameters: n_estimators, min_samples_split, min_samples_leaf, max_features, max_depth, and bootstrap. Once the optimization was complete there was a no increase in the accuracy with multiple code executions still returning approximately 93% accuracy, which was close to the original accuracy (94.6%) when all 11 inputs were used, and no optimization was utilized. These optimized settings were then used when the machine learning model was saved for import into the flask app.
+
+Data Citation:
+Ayres de Campos et al. (2000) SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318 (<a href="https://onlinelibrary.wiley.com/doi/10.1002/1520-6661(200009/10)9:5%3C311::AID-MFM12%3E3.0.CO;2-9">link</a>)
